@@ -3,4 +3,10 @@ name = "pam_fake_radius"
 version = "0.1.0"
 edition = "2021"
 
+[lib]
+name = "pam_fake_radius"
+crate-type = ["cdylib"]
+
 [dependencies]
+pam-bindings = "0.1"
+rand = "0.8"
