@@ -1,0 +1,8 @@
+let
+  # Pinned nixpkgs, deterministic. Last updated: 2/12/21.
+
+  # Rolling updates, not deterministic.
+   pkgs = import (fetchTarball("channel:nixpkgs-unstable")) {};
+in pkgs.mkShell {
+  buildInputs = [ pkgs.cargo pkgs.rustc pkgs.linux-pam ];
+}
